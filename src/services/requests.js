@@ -19,6 +19,7 @@ const sendRequest = async (method, data = null, headers = {}, token = null, para
   try {
     const response = await fetch(url, {
       method,
+      mode: "cors",
       headers: { ...defaultHeaders, ...headers },
       body: data ? JSON.stringify(data) : null,
     });
