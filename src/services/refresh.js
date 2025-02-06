@@ -4,6 +4,7 @@ export const Refresh = async (token) => {
     try {
       const response = await fetch(url, {
         method: "POST",
+        mode: "cors",
         headers: {
           "Authorization": `Bearer ${token}`,
           "Content-Type": "application/json",
